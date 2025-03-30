@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, Send, MessageCircle, EqualApproximately } from "lucide-react";
+import { X, EqualApproximately } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
