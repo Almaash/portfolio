@@ -1,26 +1,3 @@
-// import {
-//   Database,
-//   FileCode,
-//   Github,
-//   GitBranch,
-//   Server,
-//   DockIcon as Docker,
-//   Cloud,
-//   Terminal,
-//   GitPullRequest,
-//   Box,
-//   Droplet,
-//   MessageSquare,
-//   Phone,
-//   Layers,
-//   Disc,
-//   Network,
-//   Code,
-//   BarChart,
-//   FileJson,
-//   LineChart,
-//   FigmaIcon,
-// } from "lucide-react";
 
 import typescript from "../../assets/images/typescript.png";
 import tailwind from "../../assets/images/tailwind.png";
@@ -28,7 +5,7 @@ import react from "../../assets/images/reactjs.png";
 import prisma from "../../assets/images/prisma.png";
 import express from "../../assets/images/express-js.png";
 import next from "../../assets/images/next.png";
-import js from "../../assets/images/js.png";
+import js from "../../assets/images/JS.png";
 import figma from "../../assets/images/figma.png";
 import node from "../../assets/images/node.png";
 import graphql from "../../assets/images/graphql.png";
