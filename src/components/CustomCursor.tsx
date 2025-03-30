@@ -37,6 +37,7 @@ export function CustomCursor() {
     },
   };
 
+  console.log(setCursorVariant)
   return (
     <motion.div
       className="fixed top-0 left-0 rounded-full pointer-events-none z-50"

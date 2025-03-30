@@ -9,7 +9,6 @@ import delivery from "../assets/images/delivery.png";
 import Footer from "../components/Footer/Footer";
 import { useState } from "react";
 import PortfolioShowcase from "../components/Work/PortfolioShowcase";
-import AngledTextDesign from "../components/Work/AngledTextDesign";
 import Transitation from "../components/Transitation";
 
 const Work = () => {
