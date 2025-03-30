@@ -32,10 +32,10 @@ const Navbar = () => {
   }, []);
 
   const socialItems = [
-    { name: "Github", url: "#" },
-    { name: "Instagram", url: "#" },
-    { name: "Twitter", url: "#" },
-    { name: "LinkedIn", url: "#" },
+    { name: "Github", url: "https://github.com/Almaash" },
+    { name: "Instagram", url: "https://www.instagram.com/sheikhalmaash?igsh=MWpoZTc0a3hlczhiaw%3D%3D&utm_source=qr" },
+    { name: "Twitter", url: "https://x.com/almaashalam?s=11" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/almaash-alam-a96a291ab/"},
   ];
 
   return (

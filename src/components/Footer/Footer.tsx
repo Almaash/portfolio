@@ -1,11 +1,7 @@
-// import { useLoaderData, useLocation } from "react-router-dom";
 import header from "../../assets/images/header.jpg";
 
-const Footer = ({page}:any) => {
-
-  
-
-  const options:any = {
+const Footer = ({ page }: any) => {
+  const options: any = {
     weekday: "short",
     year: "numeric",
     month: "short",
@@ -18,7 +14,11 @@ const Footer = ({page}:any) => {
   return (
     <>
       <div className="min-h-screen bg-black text-white flex flex-col">
-        <div className={`flex-1 px-20 max-sm:px-4 ${page ? 'py-20': 'py-8'} flex flex-col`}>
+        <div
+          className={`flex-1 px-20 max-sm:px-4 ${
+            page ? "py-20" : "py-8"
+          } flex flex-col`}
+        >
           <div className="flex justify-between items-center mb-12">
             <div className="flex items-center gap-6">
               <div className="relative w-16 h-16 rounded-full overflow-hidden">
@@ -53,14 +53,16 @@ const Footer = ({page}:any) => {
 
           <div className="flex flex-col md:flex-row gap-4 mt-8">
             <a
-              href="mailto:info@dennisnellenberg.com"
+              href="mailto:alamalmaash@gmail.com"
               className="border border-gray-800 rounded-full py-3 px-6 hover:bg-gray-900 transition-colors text-center md:text-left"
+              aria-label="email Us"
             >
               alamalmaash@gmail.com
             </a>
             <a
-              href="tel:+31627847430"
+              href="tel:7079806009"
               className="border border-gray-800 rounded-full py-3 px-6 hover:bg-gray-900 transition-colors text-center md:text-left"
+              aria-label="Call Us"
             >
               +91 7079806009
             </a>
@@ -85,28 +87,39 @@ const Footer = ({page}:any) => {
               <p>SOCIALS</p>
               <div className="flex gap-4 mt-1">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/sheikhalmaash?igsh=MWpoZTc0a3hlczhiaw%3D%3D&utm_source=qr"
                   className="text-white hover:text-gray-300 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Instagram
+                  Follow me on Instagram
                 </a>
+
                 <a
-                  href="#"
+                  href="https://github.com/Almaash"
                   className="text-white hover:text-gray-300 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Github
+                  Check out my GitHub
                 </a>
+
                 <a
-                  href="#"
+                  href="https://x.com/almaashalam?s=11"
                   className="text-white hover:text-gray-300 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Twitter
+                  Follow me on Twitter (X)
                 </a>
+
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/almaash-alam-a96a291ab/"
                   className="text-white hover:text-gray-300 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  LinkedIn
+                  Connect with me on LinkedIn
                 </a>
               </div>
             </div>

@@ -95,12 +95,7 @@ const AboutBody = () => {
             </div>
 
             <div className=" flex justify-end items-start pr-10 space-x-2">
-              {/* <div className="border px-4 py-1 rounded-4xl cursor-pointer">
-                <h1>my work</h1>
-              </div>
-              <div className="border p-1 rounded-full cursor-pointer">
-                <ArrowUpRight />
-              </div> */}
+        
             </div>
           </div>
         </div>

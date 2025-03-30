@@ -69,7 +69,7 @@ export default function TechStack() {
                       <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full h-6 w-0.5 bg-gray-300"></div>
 
                       <div className="text-4xl text-[#4a5568] transition-transform duration-300 hover:scale-110">
-                        <img src={tech.icon} className="h-12 w-12 rounded-xl max-sm:h-5 max-sm:w-5" />
+                        <img src={tech.icon} alt="tech" className="h-12 w-12 rounded-xl max-sm:h-5 max-sm:w-5" />
                       </div>
                       <span className="text-lg font-semibold text-[#2d3748] max-sm:text-sm">
                         {tech.name}

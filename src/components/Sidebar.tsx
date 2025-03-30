@@ -13,18 +13,17 @@ export default function Sidebar() {
   return (
     <>
       <div
-  className={`fixed inset-0 transition-all duration-300 ${
-    isOpen ? "backdrop-blur-xs" : ""
-  }`}
->
-  <button
-    onClick={toggleSidebar}
-    className="fixed top-6 right-6 z-[9999] rounded-full bg-black px-4 py-4 text-white hover:bg-gray-800 cursor-pointer"
-  >
-    <EqualApproximately height={30} width={30} />
-  </button>
-</div>
-
+        className={`fixed inset-0 transition-all duration-300 ${
+          isOpen ? "backdrop-blur-xs" : ""
+        }`}
+      >
+        <button
+          onClick={toggleSidebar}
+          className="fixed top-6 right-6 z-[9999] rounded-full bg-black px-4 py-4 text-white hover:bg-gray-800 cursor-pointer"
+        >
+          <EqualApproximately height={30} width={30} />
+        </button>
+      </div>
 
       {isOpen && (
         <motion.div
@@ -51,7 +50,7 @@ export default function Sidebar() {
         </button>
 
         <nav className="mt-12 flex flex-col space-y-8 justify-center">
-        <motion.div
+          <motion.div
             whileHover={{ scale: 0.9 }}
             transition={{ duration: 0.3 }}
           >
@@ -75,7 +74,7 @@ export default function Sidebar() {
               About
             </NavLink>
           </motion.div>
-          
+
           <motion.div
             whileHover={{ scale: 0.9 }}
             transition={{ duration: 0.3 }}
@@ -103,27 +102,27 @@ export default function Sidebar() {
         </nav>
 
         <div className="mt-10 bottom-8 left-8 flex items-center space-x-4">
-          <motion.a
+          {/* <motion.a
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
             href="#"
             className="rounded-full bg-gray-200 p-4 text-black hover:bg-gray-300"
           >
             <Send className="h-5 w-5" />
-          </motion.a>
-          <motion.a
+          </motion.a> */}
+          {/* <motion.a
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
             href="#"
             className="rounded-full bg-gray-200 p-4 text-black hover:bg-gray-300"
           >
             <MessageCircle className="h-5 w-5" />
-          </motion.a>
+          </motion.a> */}
           <a
-            href="mailto:info@fooror.com"
+            href="mailto:alamalmaash@gmail.com"
             className="text-gray-400 hover:text-white"
           >
-            info@fooror.com
+            Email us at alamalmaash@gmail.com
           </a>
         </div>
       </motion.div>

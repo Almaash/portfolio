@@ -1,14 +1,13 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-// import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Header/Navbar";
-import { useEffect } from "react";
+import { lazy, useEffect } from "react";
 import Lenis from "lenis";
 import { AnimatePresence } from "framer-motion";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Work from "./pages/Work";
-import Contact from "./pages/Contact";
-import Exp from "./pages/Exp";
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Work = lazy(() => import("./pages/Work"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Exp = lazy(() => import("./pages/Exp"));
 
 function App() {
   useEffect(() => {
@@ -33,7 +32,6 @@ function App() {
   return (
     <>
       <div>
-        {/* <Sidebar /> */}
         <Navbar />
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>

@@ -1,6 +1,5 @@
 import { Globe } from "lucide-react";
 import header from "../../assets/images/header.jpg";
-// import header from "../../assets/images/888.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 

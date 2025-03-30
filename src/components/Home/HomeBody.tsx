@@ -1,56 +1,7 @@
-// import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import header from "../../assets/images/headerCroped.jpg";
 import header from "../../assets/images/alm.png";
-// import header from "../../assets/images/ammmm.png";
-// import { motion } from "framer-motion";
 
 const HomeBody = () => {
-  // const [mousePosition, setMousePosition] = useState({
-  //   x: 0,
-  //   y: 0,
-  // });
-  // const [cursorVariant, setCursorVariant] = useState("default");
-
-  // useEffect(() => {
-  //   const mouseMove = (e: any) => {
-  //     setMousePosition({
-  //       x: e.clientX,
-  //       y: e.clientY,
-  //     });
-  //   };
-
-  //   window.addEventListener("mousemove", mouseMove);
-
-  //   return () => {
-  //     window.removeEventListener("mousemove", mouseMove);
-  //   };
-  // }, []);
-
-  // const variants: any = {
-  //   default: {
-  //     x: mousePosition.x - 16,
-  //     y: mousePosition.y - 16,
-  //     scale: 1,
-  //     backgroundColor: "#111",
-  //     transition: { type: "spring", stiffness: 70, damping: 10 },
-
-  //   },
-  //   text: {
-  //     height: 150,
-  //     width: 150,
-  //     x: mousePosition.x - 75,
-  //     y: mousePosition.y - 75,
-  //     backgroundColor: "yellow",
-  //     mixBlendMode: "difference",
-  //     transition: { type: "spring", stiffness: 70, damping: 10 },
-
-  //   },
-  // };
-
-  // const textEnter = () => setCursorVariant("text");
-  // const textLeave = () => setCursorVariant("default");
-
   return (
     <>
       {/* about part */}
@@ -58,11 +9,7 @@ const HomeBody = () => {
         <hr className="border-t-2 w-[90%] border-gray-400 my-6 absolute bottom-0 max-sm:hidden" />
         <div className="flex max-sm:flex-col tracking-thin">
           <div className="text-4xl max-sm:text-2xl px-36 max-sm:px-5 max-sm:py-10 py-40">
-            <h1
-              className="leading-[1.5]"
-              // onMouseEnter={textEnter}
-              // onMouseLeave={textLeave}
-            >
+            <h1 className="leading-[1.5]">
               Helping others grow in the digital world. Together, we will set
               new trends — clear, simple, and always ahead.
             </h1>

@@ -21,18 +21,6 @@ const projects = [
     alt: "All Things Go music festival poster",
     tags: ["BRAND IDENTITY", "PITCH DECK"],
   },
-  // {
-  //   name: "FYDE",
-  //   bgColor: "bg-gray-300",
-  //   alt: "Fyde UI design",
-  //   tags: ["ALERT", "COPYWRITING", "SALES DECK", "SLIDES DESIGN"],
-  // },
-  // {
-  //   name: "ASG & MATT HORN",
-  //   bgColor: "bg-black",
-  //   alt: "Heritage meets Innovation",
-  //   tags: ["PITCH DECK"],
-  // },
 ];
 
 export default function PortfolioShowcase() {
@@ -58,7 +46,6 @@ export default function PortfolioShowcase() {
   }, [hoveredProject]);
 
   return (
-     
     <div className="relative min-h-screen bg-[#f1f1f1] p-4 flex items-center justify-center">
       <motion.div
         ref={overlayRef}
@@ -68,11 +55,12 @@ export default function PortfolioShowcase() {
         transition={{ duration: 0.3, ease: "easeOut" }}
         className="absolute transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-9"
       >
-        <h2 className="text-7xl max-sm:text-5xl font-bold text-[#E1FB84] tracking-tighter 
-      [text-shadow:1px_1px_0px_black,-1px_-1px_0px_black,1px_-1px_0px_black,-1px_1px_0px_black]">
-  {hoveredProject}
-</h2>
-
+        <h2
+          className="text-7xl max-sm:text-5xl font-bold text-[#E1FB84] tracking-tighter 
+      [text-shadow:1px_1px_0px_black,-1px_-1px_0px_black,1px_-1px_0px_black,-1px_1px_0px_black]"
+        >
+          {hoveredProject}
+        </h2>
       </motion.div>
 
       <div className="px-20 max-sm:px-5">
@@ -87,7 +75,6 @@ export default function PortfolioShowcase() {
         </div>
       </div>
     </div>
-   
   );
 }
 
@@ -134,44 +121,46 @@ function ProjectCard({
   }, [project.name, setHoveredProject]);
 
   return (
-<a
-  href={project.link}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="your-class-names"
->    <div className="flex flex-col">
-      <div className="flex justify-start items-center gap-3 pb-3">
-        <div className="h-3 w-3 rounded-full bg-black"></div>
-        <span className="text-base">{project.name}</span>
-      </div>
+    <a
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="your-class-names"
+    >
+      {" "}
+      <div className="flex flex-col">
+        <div className="flex justify-start items-center gap-3 pb-3">
+          <div className="h-3 w-3 rounded-full bg-black"></div>
+          <span className="text-base">{project.name}</span>
+        </div>
 
-      <div
-        ref={cardRef}
-        className="relative overflow-hidden w-full flex flex-col justify-between rounded-lg cursor-pointer"
-      >
         <div
-          className={`relative h-[35rem] max-sm:h-full w-full overflow-hidden flex items-center justify-center ${project.bgColor} rounded-lg`}
+          ref={cardRef}
+          className="relative overflow-hidden w-full flex flex-col justify-between rounded-lg cursor-pointer"
         >
-          <img
-            ref={imgRef}
-            src={project.image}
-            alt={project.alt}
-            className="h-full w-full object-cover transition-transform"
-          />
-        </div>
+          <div
+            className={`relative h-[35rem] max-sm:h-full w-full overflow-hidden flex items-center justify-center ${project.bgColor} rounded-lg`}
+          >
+            <img
+              ref={imgRef}
+              src={project.image}
+              alt={project.alt}
+              className="h-full w-full object-cover transition-transform"
+            />
+          </div>
 
-        <div className="mt-2 flex flex-wrap gap-2 justify-start">
-          {project.tags.map((tag: any, tagIndex: any) => (
-            <button
-              key={tagIndex}
-              className="rounded-full text-xs font-medium px-3 py-1 border border-gray-300"
-            >
-              {tag}
-            </button>
-          ))}
+          <div className="mt-2 flex flex-wrap gap-2 justify-start">
+            {project.tags.map((tag: any, tagIndex: any) => (
+              <button
+                key={tagIndex}
+                className="rounded-full text-xs font-medium px-3 py-1 border border-gray-300"
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
     </a>
   );
 }
