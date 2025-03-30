@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
-  const [page, setPage] = useState<any>();
-  const [counter, setCounter] = useState<boolean>(true);
+  // const [page, setPage] = useState<any>();
+  // const [counter, setCounter] = useState<boolean>(true);
   const [isVisible, setIsVisible] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activePage, setActivePage] = useState("Home");
@@ -15,10 +15,10 @@ const Navbar = () => {
     { name: "Contact", path: "/contact", type: 3 },
   ];
 
-  useEffect(() => {
-    let data = localStorage.getItem("page");
-    setPage(data);
-  }, [counter]);
+  // useEffect(() => {
+  //   let data = localStorage.getItem("page");
+  //   setPage(data);
+  // }, [counter]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,20 +47,21 @@ const Navbar = () => {
       <div>
         <Link
           to="/"
-          className={`text-xl cursor-pointer transition-all duration-300 hover:text-gray-300 block max-sm:hidden ${
-            page === "Home"
-              ? "text-white"
-              : page === "About"
-              ? "text-black"
-              : page === "Work"
-              ? "text-black"
-              : page === "Contact"
-              ? "text-white"
-              : ""
-          }`}
+          className={`text-xl cursor-pointer transition-all duration-300 hover:text-gray-300 block max-sm:hidden text-black`}
+          // className={`text-xl cursor-pointer transition-all duration-300 hover:text-gray-300 block max-sm:hidden ${
+          //   page === "Home"
+          //     ? "text-white"
+          //     : page === "About"
+          //     ? "text-black"
+          //     : page === "Work"
+          //     ? "text-black"
+          //     : page === "Contact"
+          //     ? "text-white"
+          //     : ""
+          // }`}
           onClick={() => {
             localStorage.setItem("page", "Home");
-            setCounter((prev) => !prev);
+            // setCounter((prev) => !prev);
             setIsMenuOpen(false);
           }}
         >
@@ -87,22 +88,25 @@ const Navbar = () => {
         {navItems.map(({ name, path, type }) => (
           <Link
             key={name}
-            to={`${path}/${type}`}
+            to={`${path}`}
+            // to={`${path}/${type}`}
             className={`text-lg cursor-pointer relative after:content-[''] after:absolute after:left-1/2 after:bottom-[-25px] after:w-2 after:h-2  after:rounded-full after:transition-transform after:duration-300 after:scale-0 hover:after:scale-100 hover:after:left-1/2 
-              ${
-                page === "Home"
-                  ? "text-white after:bg-white"
-                  : page === "About"
-                  ? "text-black after:bg-black"
-                  : page === "Work"
-                  ? "text-black after:bg-black"
-                  : page === "Contact"
-                  ? "text-white after:bg-white"
-                  : ""
-              } `}
+             text-black after:bg-black`}
+            // className={`text-lg cursor-pointer relative after:content-[''] after:absolute after:left-1/2 after:bottom-[-25px] after:w-2 after:h-2  after:rounded-full after:transition-transform after:duration-300 after:scale-0 hover:after:scale-100 hover:after:left-1/2 
+            //   ${
+            //     page === "Home"
+            //       ? "text-white after:bg-white"
+            //       : page === "About"
+            //       ? "text-black after:bg-black"
+            //       : page === "Work"
+            //       ? "text-black after:bg-black"
+            //       : page === "Contact"
+            //       ? "text-white after:bg-white"
+            //       : ""
+            //   } `}
             onClick={() => {
               localStorage.setItem("page", name);
-              setCounter((prev) => !prev);
+              // setCounter((prev) => !prev);
               setIsMenuOpen(false);
             }}
           >
@@ -176,7 +180,8 @@ const Navbar = () => {
               {navItems.map((item) => (
                 <div key={item.name} className="flex items-center">
                   <Link
-                    to={`${item.path}/${item.type}`}
+                    to={`${item.path}`}
+                    // to={`${item.path}/${item.type}`}
                     className="text-5xl font-light hover:text-gray-300 transition-colors"
                     onClick={() => {
                       setActivePage(item.name);
