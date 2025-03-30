@@ -25,12 +25,9 @@ function App() {
   const allRoutes = [
     { path: "/", element: <Home /> },
     { path: "/exp", element: <Exp /> },
-    { path: "/about", element: <About /> },
-    { path: "/work", element: <Work /> },
-    { path: "/contact", element: <Contact /> },
-    // { path: "/about/:id", element: <About /> },
-    // { path: "/work/:id", element: <Work /> },
-    // { path: "/contact/:id", element: <Contact /> },
+    { path: "/about/:id", element: <About /> },
+    { path: "/work/:id", element: <Work /> },
+    { path: "/contact/:id", element: <Contact /> },
   ];
 
   return (
