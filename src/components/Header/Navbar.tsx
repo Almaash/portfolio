@@ -85,7 +85,7 @@ const Navbar = () => {
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } sm:translate-x-0 max-sm:hidden`}
       >
-        {navItems.map(({ name, path, type }) => (
+        {navItems.map(({ name, path }) => (
           <Link
             key={name}
             to={`${path}`}
