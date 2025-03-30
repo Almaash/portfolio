@@ -1,4 +1,5 @@
-import header from "../../assets/images/header.jpg";
+// import header from "../../assets/images/header.jpg";
+import header from "../../assets/images/alm.png";
 
 const Footer = ({ page }: any) => {
   const options: any = {
