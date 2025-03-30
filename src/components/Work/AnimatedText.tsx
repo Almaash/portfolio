@@ -11,7 +11,7 @@ const AnimatedText = ({ text }: { text: string }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="text-4xl font-bold text-center pl-0 max-sm:text-start"
+      className="text-4xl font-bold text-center pl-0 max-sm:text-start max-sm:hidden"
     >
       {text}
     </motion.h1>

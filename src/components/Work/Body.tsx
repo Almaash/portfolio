@@ -12,9 +12,11 @@ const Body = () => {
               <span className="tracking-tighter">You need a website.</span>
             </span>
             <br />
-            <span className="text-black tracking-tighter">
-            <AnimatedText text="You need a high-performing website." />
-              
+            <span className="text-black tracking-tighter text-4xl font-bold text-center pl-0 max-sm:text-start">
+              <AnimatedText text="You need a high-performing website." />
+              <h1 className="hidden max-sm:block">
+                You need a high-performing website.
+              </h1>
             </span>
           </h1>
           <p className="mt-4 text-lg text-gray-700 tracking-thin">
@@ -23,7 +25,8 @@ const Body = () => {
             website and a sale.
           </p>
           <p className="mt-4 text-lg text-gray-700 tracking-thin">
-            Web designer and Webflow expert, I help you solve your online <br className="max-sm:hidden" />
+            Web designer and Webflow expert, I help you solve your online{" "}
+            <br className="max-sm:hidden" />
             visibility challenges and generate more sales by designing custom{" "}
             <br className="max-sm:hidden" />
             websites,{" "}
@@ -37,7 +40,7 @@ const Body = () => {
           </p>
         </div>
         <div className="max-sm:hidden">
-          <PathDrawing/>
+          <PathDrawing />
         </div>
       </div>
     </>
