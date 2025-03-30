@@ -15,7 +15,7 @@ const Persentation = () => {
         <hr className="w-full border-[#c1bdbd] my-6  bottom-0" />
         <div className="flex px-20 py-10 max-sm:flex-col max-sm:p-5">
           <div className="">
-            <img src={eyeopening} className="rounded-2xl max-sm:h-full "  />
+            <img src={eyeopening} className="rounded-2xl "  />
             <h1 className="max-sm:tracking-tighter max-sm:pt-5">
               Whether the presentation needs to convince <br /> or educate it
               always has to change audience <br /> perception. I seek insights
