@@ -150,7 +150,7 @@ function ProjectCard({
         className="relative overflow-hidden w-full flex flex-col justify-between rounded-lg cursor-pointer"
       >
         <div
-          className={`relative h-[35rem] w-full overflow-hidden flex items-center justify-center ${project.bgColor} rounded-lg`}
+          className={`relative h-[35rem] max-sm:h-full w-full overflow-hidden flex items-center justify-center ${project.bgColor} rounded-lg`}
         >
           <img
             ref={imgRef}
@@ -158,7 +158,6 @@ function ProjectCard({
             alt={project.alt}
             className="h-full w-full object-cover transition-transform"
           />
-          {/* <div className="absolute inset-0 bg-black/30 bg-opacity-50"></div> */}
         </div>
 
         <div className="mt-2 flex flex-wrap gap-2 justify-start">

@@ -35,11 +35,11 @@ const Header = () => {
         <div className="absolute inset-0 bg-black/20"></div>
         <div
           style={{ backgroundImage: `url(${header})` }}
-          className="w-[700px] h-[700px] max-sm:w-[400px] max-sm:h-[500px] bg-cover bg-center bg-no-repeat"
+          className="w-[700px] h-[700px] max-sm:w-full max-sm:h-full  bg-cover bg-center bg-no-repeat"
         ></div>
 
         <div className="absolute w-full flex flex-col justify-between items-center">
-          <div className="w-full flex justify-between mb-20">
+          <div className="w-full flex justify-between mb-20 max-sm:mb-20">
             <div className="w-[85%] ">
               <div className="flex items-between justify-between bg-black/90 text-white px-3 py-4 rounded-r-full w-fit max-sm:hidden">
                 <div className="text-left mr-10 ml-5 tracking-wide">

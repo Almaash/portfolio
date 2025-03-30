@@ -6,7 +6,7 @@ const Body = () => {
     <>
       <div className="flex justify-center items-center max-sm:items-start h-screen bg-[#f1f1f1] max-sm:pl-10 space-x-15 max-sm:flex-col">
         <div className=" text-gray-900">
-          <h1 className="text-4xl font-bold space-y-2 ">
+          <h1 className="text-4xl max-sm:text-3xl font-bold space-y-2 ">
             <span className="relative inline-block ">
               <span className="absolute inset-x-0 bottom-3 h-1 bg-orange-500"></span>
               <span className="tracking-tighter">You need a website.</span>
