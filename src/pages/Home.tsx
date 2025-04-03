@@ -1,5 +1,6 @@
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Home/Header";
+import HeaderNew from "../components/Home/HeaderNew";
 // import Header from "../components/Home/Header";
 // import HeaderNew from "../components/Home/Header2";
 import HomeBody from "../components/Home/HomeBody";
@@ -9,8 +10,8 @@ import Transitation from "../components/Transitation";
 const Home = () => {
   return (
     <>
-      <Header />
-      {/* <HeaderNew /> */}
+      {/* <Header /> */}
+      <HeaderNew />
       <HomeBody />
       <Persentation />
       <Footer />

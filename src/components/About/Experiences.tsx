@@ -11,9 +11,9 @@ const experiences = [
     description:
       "Aadrika is a collaboration platform for modern engineering teams. It bridges the gap between communication, cloud, code, projects, and more—with an incredible developer experience.",
     achievements: [
-      "Designed and implemented enterprise government projects of India largest Municipal Corporation(Akola, Jharkhand), Juidco",
-      "Led the transition of the application to a local-first setup using IndexedDB, significantly improving speed by reducing query and update times from about 500ms to nearly instant (around 5ms).",
-      "Developed a comprehensive front-end design system with well-structured and easy-to-use APIs, equipped with accessibility and keyboard navigation.",
+      "Worked on developing and enhancing feature-rich government projects. Implemented user-friendly interfaces with clean designs. User Authentication with JWT",
+      "Efficiently fetch data from RESTful APIs using Axios, ensuring seamless integration and dynamic content for enhanced user experiences.",
+      "Built responsive web apps with scalable, optimized code. Employed component-based architecture and organized folder structures for efficient development and maintenance",
     ],
   },
   {
@@ -25,8 +25,8 @@ const experiences = [
     description:
       "Built responsive and interactive user interfaces using Next.js, React, and Tailwind, contributing to public transport and parking management system projects.",
     achievements: [
-      "Delivered 20+ enterprise applications leveraging React, Next.js, Redux, and related technologies, focusing on dynamic user interfaces and performance.",
-      "Implemented a waste management tracking system with RFID and GPS technology, optimizing vehicle routes and saving operational costs by 25%.",
+      "Developed client-side applications using React.Js and integrate them with server-side APIs, enhancing user interaction and visual aesthetics",
+      "Design and developed scalable and efficient Node.Js application using Express.Js Framework, resulting in improved performance and user experience",
     ],
   },
 ];

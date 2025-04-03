@@ -5,7 +5,8 @@ const HomeBody = () => {
   return (
     <>
       {/* about part */}
-      <div className="relative flex justify-center">
+      {/* <div className="bg-white p-5 px-22 max-sm:px-5 rounded-t-4xl -mt-10 absolute w-full "></div> */}
+      <div className="relative flex justify-center rounded-t-2xl ">
         <hr className="border-t-2 w-[90%] border-gray-400 my-6 absolute bottom-0 max-sm:hidden" />
         <div className="flex max-sm:flex-col tracking-thin">
           <div className="text-4xl max-sm:text-2xl px-36 max-sm:px-5 max-sm:py-10 py-40">
@@ -79,10 +80,46 @@ const HomeBody = () => {
         <div className="pl-10 flex justify-start items-end max-sm:hidden ">
           <div className="">
             <h1>S</h1>
-            <h1>Instagram</h1>
-            <h1>Linkedin</h1>
-            <h1>Facebook </h1>
-            <h1>Github </h1>
+            <h1>
+              <a
+                href="https://www.instagram.com/sheikhalmaash?igsh=MWpoZTc0a3hlczhiaw%3D%3D&utm_source=qr"
+                className="relative transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+            </h1>
+            <h1>
+              <a
+                href="https://www.linkedin.com/in/almaash-alam-a96a291ab/"
+               className="relative transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </h1>
+            <h1>
+              <a
+                href="https://x.com/almaashalam?s=11"
+               className="relative transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Twitter (X)
+              </a>
+            </h1>
+            <h1>
+              <a
+                href="https://github.com/Almaash"
+               className="relative transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </h1>
           </div>
         </div>
       </div>
