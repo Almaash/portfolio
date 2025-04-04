@@ -33,9 +33,15 @@ const Navbar = () => {
 
   const socialItems = [
     { name: "Github", url: "https://github.com/Almaash" },
-    { name: "Instagram", url: "https://www.instagram.com/sheikhalmaash?igsh=MWpoZTc0a3hlczhiaw%3D%3D&utm_source=qr" },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/sheikhalmaash?igsh=MWpoZTc0a3hlczhiaw%3D%3D&utm_source=qr",
+    },
     { name: "Twitter", url: "https://x.com/almaashalam?s=11" },
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/almaash-alam-a96a291ab/"},
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/almaash-alam-a96a291ab/",
+    },
   ];
 
   return (
@@ -56,7 +62,7 @@ const Navbar = () => {
               ? "text-black"
               : page === "Contact"
               ? "text-white"
-              : ""
+              : "text-white"
           }`}
           onClick={() => {
             localStorage.setItem("page", "Home");
@@ -98,7 +104,7 @@ const Navbar = () => {
                   ? "text-black after:bg-black"
                   : page === "Contact"
                   ? "text-white after:bg-white"
-                  : ""
+                  : "text-white after:bg-white"
               } `}
             onClick={() => {
               localStorage.setItem("page", name);
@@ -111,7 +117,11 @@ const Navbar = () => {
         ))}
       </div>
 
-      <div className={`block sm:hidden bg-black ${!isMenuOpen && 'p-5 py-7'} rounded-full`}>
+      <div
+        className={`block sm:hidden bg-black ${
+          !isMenuOpen && "p-5 py-7"
+        } rounded-full`}
+      >
         {/* Mobile Menu Button - Not shown in the image but needed for functionality */}
         {!isMenuOpen && (
           <div className="sm:hidden z-50 flex items-center">
