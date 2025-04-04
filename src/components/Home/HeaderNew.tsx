@@ -27,7 +27,7 @@ const HeaderNew = () => {
   return (
     <div className="relative flex justify-center items-center min-h-screen bg-[#0D1117] overflow-hidden">
       {/* Video Background */}
-      <video className="absolute inset-0 w-full h-full object-cover" src={headerVideo} autoPlay loop muted></video>
+      <video className="absolute inset-0 w-full h-full object-cover" src={headerVideo} autoPlay loop muted  playsInline></video>
       <div className="absolute inset-0 bg-black/70"></div>
       
       {/* Content */}
