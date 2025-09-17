@@ -1,13 +1,32 @@
 import aadrika from "../../assets/images/aadrika.jpg";
 import cdzljpg from "../../assets/images/cdzljpg.jpg";
+import edithtechLogo from "../../assets/images/editech.png";
 
 const experiences = [
+  {
+    logo: edithtechLogo, 
+    role: "MERN Stack Developer",
+    company: "Edithtech Infrastructure",
+    location: "Indore",
+    period: "May 2025 — Present",
+    description:
+      "Developed a full-stack pizza delivery and booking platform with real-time order tracking and a responsive, mobile-first UI.",
+    achievements: [
+      "Built dynamic, scalable frontends using Next.js, TailwindCSS, and MUI.",
+      "Designed and implemented REST APIs with Node.js & Express, managing orders, carts, and live updates.",
+      "Structured robust databases using PostgreSQL & Drizzle ORM for optimized performance and data integrity.",
+      "Integrated secure authentication via OTPless and JWT for seamless user access.",
+      "Enabled real-time communication with Socket.io for live order status and notifications.",
+      "Managed media storage and delivery with Cloudinary for optimized performance.",
+      "Deployed and optimized the system for scalability and high-traffic reliability.",
+    ],
+  },
   {
     logo: aadrika,
     role: "Fullstack Software Developer",
     company: "Aadrika Enterprises",
     location: "Ranchi, India",
-    period: "Feb 2024 — Present",
+    period: "Feb 2024 — May 2025",
     description:
       "Aadrika is a collaboration platform for modern engineering teams. It bridges the gap between communication, cloud, code, projects, and more—with an incredible developer experience.",
     achievements: [
@@ -29,7 +48,9 @@ const experiences = [
       "Design and developed scalable and efficient Node.Js application using Express.Js Framework, resulting in improved performance and user experience",
     ],
   },
+  
 ];
+
 
 const Experience = ({
   logo,

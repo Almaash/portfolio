@@ -14,6 +14,8 @@ import pg from "../../assets/images/pg.png";
 import aws from "../../assets/images/aws.png";
 import git from "../../assets/images/git.png";
 import github from "../../assets/images/github.png";
+import hostinger from "../../assets/images/hostinger.png";
+import vps from "../../assets/images/vps.png";
 
 export default function TechStack() {
   const categories = {
@@ -41,6 +43,10 @@ export default function TechStack() {
     Tools: [
       { name: "Git", icon: git },
       { name: "GitHub", icon: github },
+    ],
+    Deployment: [
+      { name: "Hostinger", icon: hostinger },
+      { name: "VPS Hosting", icon: vps },
     ],
   };
 
