@@ -4,7 +4,7 @@ import edithtechLogo from "../../assets/images/editech.png";
 
 const experiences = [
   {
-    logo: edithtechLogo, 
+    logo: edithtechLogo,
     role: "MERN Stack Developer",
     company: "Edithtech Infrastructure",
     location: "Indore",
@@ -48,9 +48,7 @@ const experiences = [
       "Design and developed scalable and efficient Node.Js application using Express.Js Framework, resulting in improved performance and user experience",
     ],
   },
-  
 ];
-
 
 const Experience = ({
   logo,
@@ -64,42 +62,53 @@ const Experience = ({
 }: any) => {
   return (
     <div
-      className={`relative flex max-sm:flex-col  ${
+      className={`relative flex max-sm:flex-col ${
         isRight ? "flex-row-reverse" : ""
-      } items-center mb-10`}
+      } items-center`}
     >
+      {/* Period on desktop */}
       <div
-        className={`hidden md:block w-1/2 max-sm:w-full ${
-          isRight ? "pl-12 text-left" : "pr-12 text-right"
-        }`}
+        className={`hidden md:block w-1/2 ${
+          isRight ? "pl-10 text-left" : "pr-10 text-right"
+        } text-gray-500 font-medium`}
       >
         {period}
       </div>
-      <div className="absolute left-1/2 -translate-x-1/2 w-3 h-3 bg-[#004D43] rounded-full z-10 max-sm:hidden"></div>
-      <div className="w-1/2 px-20 max-sm:px-0 max-sm:w-full">
-        <div className="bg-white rounded-lg p-6 shadow-lg">
-          <div className="flex items-start gap-4 mb-4">
+
+      {/* Timeline dot */}
+      <div className="absolute left-1/2 -translate-x-1/2 z-10">
+        <div className="w-5 h-5 bg-[#004D43] rounded-full shadow-lg shadow-[#004D43]/50"></div>
+      </div>
+
+      {/* Card */}
+      <div className="w-1/2 max-sm:w-full px-6 max-sm:px-0">
+        <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div className="flex items-center gap-4 mb-4">
             <img
               src={logo || "/placeholder.svg"}
               alt={`${company} logo`}
-              className="w-10 h-10 rounded-full border border-gray-400 p-1"
+              className="w-12 h-12 rounded-full border border-gray-300 p-1"
             />
             <div>
-              <h3 className="text-xl font-bold">{role}</h3>
-              <p className="">
+              <h3 className="text-lg font-semibold text-gray-800">{role}</h3>
+              <p className="text-sm text-gray-600">
                 {company} • {location}
               </p>
             </div>
           </div>
-          <div className="md:hidden text-sm  mb-4">{period}</div>
-          <p className=" mb-4">{description}</p>
-          <ul className="space-y-3">
+
+          {/* Period on mobile */}
+          <div className="md:hidden text-sm text-gray-500 mb-3">{period}</div>
+
+          <p className="text-gray-700 mb-4">{description}</p>
+
+          <ul className="space-y-2">
             {achievements.map((achievement: any, index: any) => (
               <li key={index} className="flex items-start gap-2">
-                <div className="min-w-4 mt-1.5">
+                <div className="mt-1.5">
                   <div className="w-2 h-2 bg-[#004D43] rounded-full"></div>
                 </div>
-                <p className="text-sm">{achievement}</p>
+                <p className="text-sm text-gray-600">{achievement}</p>
               </li>
             ))}
           </ul>
@@ -112,18 +121,17 @@ const Experience = ({
 const ExperiencesTimeline = () => {
   return (
     <div className="bg-[#F8F6EE]">
-      <div className=" min-h-screen  px-30 py-1 max-sm:px-5 max-sm:py-0">
-        <div className="">
-          <h1 className="text-5xl  py-15 leading-[1.2] underline">
-            Experiences
-          </h1>
-          <div className="relative">
-            <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-gray-300"></div>
-            <div className="space-y-24">
-              {experiences.map((exp, index) => (
-                <Experience key={index} {...exp} isRight={index % 2 !== 0} />
-              ))}
-            </div>
+      <div className="min-h-screen px-8 sm:px-16 lg:px-28 py-12">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-16 text-center underline decoration-[#004D43]">
+          Experiences
+        </h1>
+        <div className="relative">
+          {/* Timeline line */}
+          <div className="absolute left-1/2 -translate-x-1/2 w-1 h-full bg-gray-300"></div>
+          <div className="space-y-20">
+            {experiences.map((exp, index) => (
+              <Experience key={index} {...exp} isRight={index % 2 !== 0} />
+            ))}
           </div>
         </div>
       </div>
