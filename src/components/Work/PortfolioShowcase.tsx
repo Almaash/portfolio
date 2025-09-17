@@ -1,166 +1,132 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import cabzzz from "../../assets/images/cabzz.png";
+import chipx  from "../../assets/images/chipx.png";
 import work from "../../assets/images/msms.png";
-import { motion } from "framer-motion";
+import elfos from "../../assets/images/elfos.png";
 
 const projects = [
+  {
+    name: "Elfos Pizza Ordering System",
+    bgColor: "bg-orange-500",
+    image: elfos,
+    link: "http://elfospizza.in/",
+    alt: "Full-stack pizza ordering and management system for multiple outlets",
+    tags: ["FULL-STACK DEVELOPMENT", "CMS", "E-COMMERCE"],
+  },
+  {
+    name: "ChipX Semiconductor School",
+    bgColor: "bg-blue-500",
+    image: chipx,
+    link: "https://www.chipx.co.in/",
+    alt: "ChipX equips engineers with practical skills and career support to thrive in India’s semiconductor industry.",
+    tags: ["FULL-STACK DEVELOPMENT", "E-COMMERCE"],
+  },
   {
     name: "CABZZ",
     bgColor: "bg-gray-400",
     alt: "Cab Booking System",
     image: cabzzz,
-    link: "https://cabzz-git-almaash-almaashs-projects.vercel.app",
+    link: "https://taxi-booking-f-3mrk.vercel.app/",
     tags: ["CAB BOOKING", "LOCATION TRACKING"],
   },
   {
-    name: "MultiStore Managemnet System",
+    name: "MultiStore Management System",
     bgColor: "bg-amber-700",
     image: work,
     link: "https://microposindia.vercel.app",
-    alt: "All Things Go music festival poster",
+    alt: "Multi store pos system",
     tags: ["BRAND IDENTITY", "PITCH DECK"],
   },
 ];
 
 export default function PortfolioShowcase() {
-  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
-  const overlayRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (hoveredProject) {
-      gsap.to(overlayRef.current, {
-        opacity: 1,
-        scale: 1,
-        duration: 0.5,
-        ease: "power3.out",
-      });
-    } else {
-      gsap.to(overlayRef.current, {
-        opacity: 0,
-        scale: 0.8,
-        duration: 0.4,
-        ease: "power3.out",
-      });
-    }
-  }, [hoveredProject]);
-
   return (
-    <div className="relative min-h-screen bg-[#f1f1f1] p-4 flex items-center justify-center">
-      <motion.div
-        ref={overlayRef}
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, scale: 0.8 }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
-        className="absolute transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-9"
-      >
-        <h2
-          className="text-7xl max-sm:text-5xl font-bold text-[#E1FB84] tracking-tighter 
-      [text-shadow:1px_1px_0px_black,-1px_-1px_0px_black,1px_-1px_0px_black,-1px_1px_0px_black]"
-        >
-          {hoveredProject}
-        </h2>
-      </motion.div>
-
-      <div className="px-20 max-sm:px-5">
-        <div className="grid grid-cols-2 gap-8 place-items-center max-sm:grid-cols-1 ">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              project={project}
-              setHoveredProject={setHoveredProject}
-            />
-          ))}
-        </div>
+    <div className="min-h-screen bg-[#f1f1f1] py-16 px-6 flex items-center justify-center">
+      <div className="flex flex-wrap justify-center gap-12 max-sm:flex-col max-sm:items-center">
+        {projects.map((project, index) => (
+          <ProjectCard key={index} project={project} />
+        ))}
       </div>
     </div>
   );
 }
 
-function ProjectCard({
-  project,
-  setHoveredProject,
-}: {
-  project: any;
-  setHoveredProject: (name: string | null) => void;
-}) {
-  const cardRef = useRef<HTMLDivElement>(null);
+function ProjectCard({ project }: { project: any }) {
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-    const card = cardRef.current;
+    const card = imgRef.current?.parentElement; // the <a> element
     const image = imgRef.current;
 
-    gsap.set(card, { scale: 1 });
-    gsap.set(image, { scale: 1 });
+    if (!card || !image) return;
 
     const handleMouseEnter = () => {
-      setHoveredProject(project.name);
-      gsap.to(card, { scale: 0.96, duration: 0.5, ease: "power3.out" });
-      gsap.to(image, { scale: 1.1, duration: 0.5, ease: "power3.out" });
+      gsap.to(image, {
+        filter: "blur(6px)",
+        duration: 0.5,
+        ease: "power3.out",
+      });
     };
 
     const handleMouseLeave = () => {
-      setHoveredProject(null);
-      gsap.to(card, { scale: 1, duration: 0.6, ease: "expo.out" });
-      gsap.to(image, { scale: 1, duration: 0.6, ease: "expo.out" });
+      gsap.to(image, {
+        filter: "blur(0px)",
+        duration: 0.6,
+        ease: "expo.out",
+      });
     };
 
-    if (card) {
-      card.addEventListener("mouseenter", handleMouseEnter);
-      card.addEventListener("mouseleave", handleMouseLeave);
-    }
+    card.addEventListener("mouseenter", handleMouseEnter);
+    card.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
-      if (card) {
-        card.removeEventListener("mouseenter", handleMouseEnter);
-        card.removeEventListener("mouseleave", handleMouseLeave);
-      }
+      card.removeEventListener("mouseenter", handleMouseEnter);
+      card.removeEventListener("mouseleave", handleMouseLeave);
     };
-  }, [project.name, setHoveredProject]);
+  }, []);
 
   return (
     <a
       href={project.link}
       target="_blank"
       rel="noopener noreferrer"
-      className="your-class-names"
+      className="relative block rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition w-[35rem] h-[34rem] max-sm:w-[20rem] max-sm:h-[26rem]"
     >
-      {" "}
-      <div className="flex flex-col">
-        <div className="flex justify-start items-center gap-3 pb-3">
-          <div className="h-3 w-3 rounded-full bg-black"></div>
-          <span className="text-base">{project.name}</span>
+      {/* Background Image */}
+      <img
+        ref={imgRef}
+        src={project.image}
+        alt={project.alt}
+        className="w-full h-full object-cover transition-all"
+      />
+
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+
+      {/* Overlay Content */}
+      <div className="absolute inset-0 flex flex-col justify-end p-6">
+        <h3 className="text-white text-2xl font-bold mb-2">{project.name}</h3>
+        <p className="text-gray-200 text-sm mb-4">{project.alt}</p>
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 mb-4">
+          {project.tags.map((tag: string, i: number) => (
+            <span
+              key={i}
+              className="bg-white/20 text-white text-xs px-3 py-1 rounded-full backdrop-blur-md border border-white/30"
+            >
+              {tag}
+            </span>
+          ))}
         </div>
 
-        <div
-          ref={cardRef}
-          className="relative overflow-hidden w-full flex flex-col justify-between rounded-lg cursor-pointer"
-        >
-          <div
-            className={`relative h-[35rem] max-sm:h-full w-full overflow-hidden flex items-center justify-center ${project.bgColor} rounded-lg`}
-          >
-            <img
-              ref={imgRef}
-              src={project.image}
-              alt={project.alt}
-              className="h-full w-full object-cover transition-transform"
-            />
-          </div>
-
-          <div className="mt-2 flex flex-wrap gap-2 justify-start">
-            {project.tags.map((tag: any, tagIndex: any) => (
-              <button
-                key={tagIndex}
-                className="rounded-full text-xs font-medium px-3 py-1 border border-gray-300"
-              >
-                {tag}
-              </button>
-            ))}
-          </div>
-        </div>
+        {/* Button */}
+        <button className="px-4 py-2 bg-white/20 text-white text-sm font-medium rounded-full backdrop-blur-md border border-white/30 hover:bg-white/30 transition cursor-pointer">
+          View Project
+        </button>
       </div>
     </a>
   );
 }
+
