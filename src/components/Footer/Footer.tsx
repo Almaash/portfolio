@@ -18,11 +18,11 @@ const Footer = ({ page }: any) => {
     <>
       <div className="min-h-screen bg-black text-white flex flex-col">
         <div
-          className={`flex-1 px-20 max-sm:px-4  py-8     
-          flex flex-col`}
-        // className={`flex-1 px-20 max-sm:px-4 ${
-        //   page ? "py-20" : "py-8"
-        // } flex flex-col`}
+          // className={`flex-1 px-20 max-sm:px-4  py-8     
+          // flex flex-col`}
+        className={`flex-1 px-20 max-sm:px-4 ${
+          page ? "py-20" : "py-8"
+        } flex flex-col`}
         >
           <div className="flex justify-between items-center mb-12">
             <div className="flex items-center gap-6">
