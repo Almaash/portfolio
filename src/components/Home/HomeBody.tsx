@@ -42,9 +42,9 @@ const HomeBody = () => {
             </div> */}
 
 
-            <div className="flex justify-start max-sm:justify-end items-end -ml-10 mb-2 max-sm:mb-10">
+            <div className="flex justify-start max-sm:justify-end items-end -ml-10 max-sm:ml-0 mb-2 max-sm:mb-10">
               <Magnetic intensity={0.2} springOptions={springOptions} actionArea="global" range={200}>
-                <div className="w-35 h-35 max-sm:mt-10 bg-black text-white rounded-full flex items-center justify-center text-center absolute bottom-2">
+                <div className="w-35 h-35 -max-sm:mt-10 bg-black text-white rounded-full flex items-center justify-center text-center absolute max-sm:static bottom-2 max-sm:mr-2">
                   <Magnetic intensity={0.1} springOptions={springOptions} actionArea="global" range={200}>
                     <Link to="/about">
                       <h1>
@@ -55,6 +55,7 @@ const HomeBody = () => {
                 </div>
               </Magnetic>
             </div>
+
 
 
           </div>
