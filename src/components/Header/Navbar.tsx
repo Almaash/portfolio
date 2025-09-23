@@ -10,9 +10,9 @@ const Navbar = () => {
   const [activePage, setActivePage] = useState("Home");
 
   const navItems = [
-    { name: "About", path: "/about", type: 1 },
-    { name: "Work", path: "/work", type: 2 },
-    { name: "Contact", path: "/contact", type: 3 },
+    { name: "About", path: "/about" },
+    { name: "Work", path: "/work" },
+    { name: "Contact", path: "/contact" },
   ];
 
   useEffect(() => {
@@ -90,10 +90,10 @@ const Navbar = () => {
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } sm:translate-x-0 max-sm:hidden`}
       >
-        {navItems.map(({ name, path, type }) => (
+        {navItems.map(({ name, path }) => (
           <Link
             key={name}
-            to={`${path}/${type}`}
+            to={path}
             className={`text-lg cursor-pointer relative after:content-[''] after:absolute after:left-1/2 after:bottom-[-25px] after:w-2 after:h-2  after:rounded-full after:transition-transform after:duration-300 after:scale-0 hover:after:scale-100 hover:after:left-1/2 
               ${
                 page === "Home"
@@ -122,7 +122,6 @@ const Navbar = () => {
           !isMenuOpen && "p-5 py-7"
         } rounded-full`}
       >
-        {/* Mobile Menu Button - Not shown in the image but needed for functionality */}
         {!isMenuOpen && (
           <div className="sm:hidden z-50 flex items-center">
             <button
@@ -137,14 +136,6 @@ const Navbar = () => {
                   <span className="block w-6 h-[1px] bg-white"></span>
                 </>
               )}
-              {/* {isMenuOpen ? (
-              <X />
-            ) : (
-              <>
-                <span className="block w-6 h-[1px] bg-white mb-1.5"></span>
-                <span className="block w-6 h-[1px] bg-white"></span>
-              </>
-            )} */}
             </button>
           </div>
         )}
@@ -186,7 +177,7 @@ const Navbar = () => {
               {navItems.map((item) => (
                 <div key={item.name} className="flex items-center">
                   <Link
-                    to={`${item.path}/${item.type}`}
+                    to={item.path}
                     className="text-5xl font-light hover:text-gray-300 transition-colors"
                     onClick={() => {
                       setActivePage(item.name);
