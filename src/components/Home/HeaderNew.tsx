@@ -92,8 +92,14 @@ const HeaderNew = () => {
         loop
         muted
         playsInline
+        controls={false} // optional, iOS may need this as fallback
         poster={headerImage}
+        onCanPlay={() => {
+          const video = document.querySelector("video") as HTMLVideoElement;
+          if (video) video.play().catch(() => { });
+        }}
       />
+
 
       <div className="absolute inset-0 bg-black/70"></div>
 
