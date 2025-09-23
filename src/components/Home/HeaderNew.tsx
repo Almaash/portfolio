@@ -74,7 +74,7 @@ const HeaderNew = () => {
                 className="inline-flex w-full items-center justify-center"
               >
                 <div className="inline-flex items-center text-sm text-black dark:text-black">
-                  ALmaash
+                  Almaash
                   {/* <PlusIcon className="ml-1 h-4 w-4" /> */}
                 </div>
               </motion.div>
