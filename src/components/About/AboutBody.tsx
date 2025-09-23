@@ -1,19 +1,39 @@
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
+// import { SpinningText } from "../../../components/ui/spinning-text";
+
+
+// export function SpinningTextCustomTransition() {
+//   return (
+//    <SpinningText
+//       radius={20}
+//       fontSize={1.2}
+//       className='font-medium leading-none'
+//     >
+//   {`Full-Stack Developer • JavaScript • React • Node.js • TypeScript • Full-Stack Developer • `}
+//     </SpinningText>
+//   );
+// }
 
 const AboutBody = () => {
+
+
   return (
     <>
       <div className="bg-[#f1f1f1]  max-sm:m-0 ">
         {/*----------- About me Part 1 -------------*/}
-        <div className="grid grid-cols-5 max-sm:grid-cols-1 max-sm:px-10 w-full pl-22 py-10 tracking-thin  border-gray-400 ">
-          <div className=" col-span-2 ">
+        <div className="grid grid-cols-5 max-sm:grid-cols-1 max-sm:px-10 w-full pl-22 py-10 tracking-thin border-gray-400 relative">
+
+          {/* Left title */}
+          <div className="col-span-2">
             <h1>About me:</h1>
           </div>
+
           <hr className="hidden w-[50%] max-sm:block mt-4 border-gray-400" />
 
-          <div className=" col-span-2   max-sm:pt-5">
-            <h1 className="">
+          {/* Middle content */}
+          <div className="col-span-2 max-sm:pt-5">
+            <h1>
               For me, technology is all about vision—the ability{" "}
               <br className="max-sm:hidden" />
               to turn ideas into reality through clean code and{" "}
@@ -27,7 +47,7 @@ const AboutBody = () => {
               <br className="max-sm:hidden" />
               not just words.
             </h1>
-            <h1 className="pt-10 ">
+            <h1 className="pt-10">
               Well-crafted applications, intuitive interfaces, and{" "}
               <br className="max-sm:hidden" /> seamless interactions leave a
               lasting impression. <br className="max-sm:hidden" />
@@ -37,34 +57,43 @@ const AboutBody = () => {
             </h1>
           </div>
 
-          <div className=" flex justify-end items-start pr-10 space-x-2 max-sm:pt-10 max-sm:justify-start">
+          {/* Right side - Spinning text */}
+          {/* <div className="col-span-1 flex justify-end items-start pr-10 max-sm:hidden">
+            <SpinningTextCustomTransition />
+          </div> */}
+
+          {/* Buttons below content */}
+          <div className="flex justify-end items-start pr-10 space-x-2 max-sm:pt-10 max-sm:justify-start">
             <div className="flex items-center gap-4">
-              {/* Text Button */}
-              <Link to={'/work'}>
-              <div className="group relative border border-gray-600 px-4 py-1 rounded-full cursor-pointer overflow-hidden">
-                <div className="absolute inset-0 bg-black scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></div>
-                <h1 className="relative z-10 text-gray-600 group-hover:text-white transition-colors duration-300">
-                  my work
-                </h1>
-              </div>
+              <Link to={"/work"}>
+                <div className="group relative border border-gray-600 px-4 py-1 rounded-full cursor-pointer overflow-hidden">
+                  <div className="absolute inset-0 bg-black scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></div>
+                  <h1 className="relative z-10 text-gray-600 group-hover:text-white transition-colors duration-300">
+                    my work
+                  </h1>
+                </div>
+
               </Link>
 
-              {/* Icon Button */}
-              <Link to={'/work'}>
-              <div className="group relative border border-gray-600 p-1 rounded-full cursor-pointer overflow-hidden">
-                <div className="absolute inset-0 bg-black scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></div>
-                <ArrowUpRight className="relative z-10 text-gray-600 group-hover:text-white transition-colors duration-300" />
-              </div>
+              <Link to={"/work"}>
+                <div className="group relative border border-gray-600 p-1 rounded-full cursor-pointer overflow-hidden">
+                  <div className="absolute inset-0 bg-black scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></div>
+                  <ArrowUpRight className="relative z-10 text-gray-600 group-hover:text-white transition-colors duration-300" />
+                </div>
               </Link>
             </div>
           </div>
         </div>
+
         {/*----------- About me Part 2 -------------*/}
         <div className="">
           <h1 className="text-5xl px-20 py-15 leading-[1.2] max-sm:text-4xl max-sm:px-5">
             I can craft impactful, visually compelling applications,{" "}
             <br className="max-sm:hidden" /> that enhance user experiences.
           </h1>
+
+
+
 
           <div className="grid grid-cols-5 max-sm:grid-cols-1  w-full pl-22 max-sm:px-10 py-5 pb-20 tracking-thin  border-[#bcc4ce] border-t ">
             <div className=" col-span-2 ">
@@ -95,7 +124,8 @@ const AboutBody = () => {
             </div>
 
             <div className=" flex justify-end items-start pr-10 space-x-2">
-        
+              {/* <SpinningTextCustomTransition /> */}
+
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 // import header from "../../assets/images/header.jpg";
+import { Magnetic } from "../../../components/ui/magnetic";
 import header from "../../assets/images/alm.png";
 
 const Footer = ({ page }: any) => {
@@ -12,7 +13,7 @@ const Footer = ({ page }: any) => {
     .toLocaleDateString("en-US", options)
     .replace(",", "");
 
-    console.log(page)
+  console.log(page)
 
   return (
     <>
@@ -20,9 +21,8 @@ const Footer = ({ page }: any) => {
         <div
           // className={`flex-1 px-20 max-sm:px-4  py-8     
           // flex flex-col`}
-        className={`flex-1 px-20 max-sm:px-4 ${
-          page ? "py-20" : "py-8"
-        } flex flex-col`}
+          className={`flex-1 px-20 max-sm:px-4 ${page ? "py-20" : "py-8"
+            } flex flex-col`}
         >
           <div className="flex justify-between items-center mb-12">
             <div className="flex items-center gap-6">
@@ -50,9 +50,13 @@ const Footer = ({ page }: any) => {
             <hr className="border-gray-800" />
 
             <div className="absolute right-50 -top-30 max-sm:right-1 max-sm:-top-25">
-              <button className="bg-blue-600 hover:bg-blue-700 transition-colors text-white rounded-full w-32 h-32 md:w-40 md:h-40 flex items-center justify-center">
-                <span className="text-sm md:text-base">Get in touch</span>
-              </button>
+              <Magnetic intensity={0.2} springOptions={{ bounce: 0.1 }} actionArea="global" range={200}>
+                <button className="bg-blue-600 hover:bg-blue-700 transition-colors text-white rounded-full w-32 h-32 md:w-40 md:h-40 flex items-center justify-center cursor-pointer">
+                  <Magnetic intensity={0.1} springOptions={{ bounce: 0.1 }} actionArea="global" range={200}>
+                    <span className="text-sm md:text-base">Get in touch</span>
+                  </Magnetic>
+                </button>
+              </Magnetic>
             </div>
           </div>
 

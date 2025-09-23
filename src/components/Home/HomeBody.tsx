@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import header from "../../assets/images/alm.png";
+import { Magnetic } from "./../../../components/ui/magnetic";
+
 
 const HomeBody = () => {
+
+  const springOptions = { bounce: 0.1 };
+
   return (
     <>
       {/* about part */}
@@ -26,7 +31,7 @@ const HomeBody = () => {
               </h1>
             </div>
 
-            <div className=" flex justify-start max-sm:justify-end items-end -ml-10 mb-2 max-sm:mb-10">
+            {/* <div className=" flex justify-start max-sm:justify-end items-end -ml-10 mb-2 max-sm:mb-10">
               <div className="w-35 h-35 max-sm:mt-10 bg-black text-white rounded-full flex items-center justify-center text-center absolute">
                 <Link to="/about">
                   <h1>
@@ -34,7 +39,24 @@ const HomeBody = () => {
                   </h1>
                 </Link>
               </div>
+            </div> */}
+
+
+            <div className="flex justify-start max-sm:justify-end items-end -ml-10 mb-2 max-sm:mb-10">
+              <Magnetic intensity={0.2} springOptions={springOptions} actionArea="global" range={200}>
+                <div className="w-35 h-35 max-sm:mt-10 bg-black text-white rounded-full flex items-center justify-center text-center absolute bottom-2">
+                  <Magnetic intensity={0.1} springOptions={springOptions} actionArea="global" range={200}>
+                    <Link to="/about">
+                      <h1>
+                        About <br /> me
+                      </h1>
+                    </Link>
+                  </Magnetic>
+                </div>
+              </Magnetic>
             </div>
+
+
           </div>
         </div>
       </div>

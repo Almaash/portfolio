@@ -1,20 +1,16 @@
 import type React from "react";
+import { motion, Variants } from "framer-motion";
 
-import { motion } from "framer-motion";
-
-const draw = {
+const draw: Variants = {
   hidden: { pathLength: 0, opacity: 0 },
-  visible: (i: number) => {
-    const delay = i * 0.5;
-    return {
-      pathLength: 1,
-      opacity: 1,
-      transition: {
-        pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
-        opacity: { delay, duration: 0.01 },
-      },
-    };
-  },
+  visible: (custom: number) => ({
+    pathLength: 1,
+    opacity: 1,
+    transition: {
+      pathLength: { delay: custom * 0.5, type: "spring", duration: 1.5, bounce: 0 },
+      opacity: { delay: custom * 0.5, duration: 0.01 },
+    },
+  }),
 };
 
 export default function PathDrawing() {
@@ -27,8 +23,8 @@ export default function PathDrawing() {
       animate="visible"
       style={image}
     >
+      {/* First Row */}
       <motion.circle
-        className="circle-path"
         cx="100"
         cy="100"
         r="80"
@@ -68,6 +64,8 @@ export default function PathDrawing() {
         custom={3}
         style={shape}
       />
+
+      {/* Second Row */}
       <motion.circle
         cx="100"
         cy="300"
@@ -83,8 +81,8 @@ export default function PathDrawing() {
         x2="360"
         y2="370"
         stroke="orange"
-        custom={3}
         variants={draw}
+        custom={3}
         style={shape}
       />
       <motion.line
@@ -93,8 +91,8 @@ export default function PathDrawing() {
         x2="360"
         y2="230"
         stroke="orange"
-        custom={3.5}
         variants={draw}
+        custom={3.5}
         style={shape}
       />
       <motion.rect
@@ -104,10 +102,12 @@ export default function PathDrawing() {
         y="230"
         rx="20"
         stroke="black"
-        custom={4}
         variants={draw}
+        custom={4}
         style={shape}
       />
+
+      {/* Third Row */}
       <motion.circle
         cx="100"
         cy="500"
@@ -155,7 +155,6 @@ export default function PathDrawing() {
 /**
  * ==============   Styles   ================
  */
-
 const image: React.CSSProperties = {
   maxWidth: "80vw",
 };
