@@ -58,6 +58,8 @@ const Navbar = () => {
           className={`text-xl cursor-pointer transition-all duration-300 hover:text-gray-300 block max-sm:hidden ${
             page === "Home"
               ? "text-white"
+              : page === ""
+              ? "text-white"
               : page === "About"
               ? "text-black"
               : page === "Work"
