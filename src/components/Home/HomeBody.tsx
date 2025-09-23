@@ -28,9 +28,11 @@ const HomeBody = () => {
 
             <div className=" flex justify-start max-sm:justify-end items-end -ml-10 mb-2 max-sm:mb-10">
               <div className="w-35 h-35 max-sm:mt-10 bg-black text-white rounded-full flex items-center justify-center text-center absolute">
-                <h1>
-                  About <br /> me
-                </h1>
+                <Link to="/about">
+                  <h1>
+                    About <br /> me
+                  </h1>
+                </Link>
               </div>
             </div>
           </div>
@@ -93,7 +95,7 @@ const HomeBody = () => {
             <h1>
               <a
                 href="https://www.linkedin.com/in/almaash-alam-a96a291ab/"
-               className="relative transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full"
+                className="relative transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -103,7 +105,7 @@ const HomeBody = () => {
             <h1>
               <a
                 href="https://x.com/almaashalam?s=11"
-               className="relative transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full"
+                className="relative transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -113,7 +115,7 @@ const HomeBody = () => {
             <h1>
               <a
                 href="https://github.com/Almaash"
-               className="relative transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full"
+                className="relative transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-gray-800 after:transition-all after:duration-300 hover:after:w-full"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -131,7 +133,7 @@ const HomeBody = () => {
           <h2 className="text-5xl text-black tracking-thin max-sm:text-3xl">
             My approach:
           </h2>
-          <Link to="/about/1">
+          <Link to="/about">
             <button className="group relative overflow-hidden mt-6 flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full transition-all duration-500 cursor-pointer">
               {/* Background Animation */}
               <div className="absolute inset-0 bg-[#484646] scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100 border border-[#586c0e] rounded-full"></div>

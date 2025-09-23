@@ -40,7 +40,7 @@ const AboutBody = () => {
           <div className=" flex justify-end items-start pr-10 space-x-2 max-sm:pt-10 max-sm:justify-start">
             <div className="flex items-center gap-4">
               {/* Text Button */}
-              <Link to={'/work/2'}>
+              <Link to={'/work'}>
               <div className="group relative border border-gray-600 px-4 py-1 rounded-full cursor-pointer overflow-hidden">
                 <div className="absolute inset-0 bg-black scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></div>
                 <h1 className="relative z-10 text-gray-600 group-hover:text-white transition-colors duration-300">
@@ -50,7 +50,7 @@ const AboutBody = () => {
               </Link>
 
               {/* Icon Button */}
-              <Link to={'/work/2'}>
+              <Link to={'/work'}>
               <div className="group relative border border-gray-600 p-1 rounded-full cursor-pointer overflow-hidden">
                 <div className="absolute inset-0 bg-black scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></div>
                 <ArrowUpRight className="relative z-10 text-gray-600 group-hover:text-white transition-colors duration-300" />
